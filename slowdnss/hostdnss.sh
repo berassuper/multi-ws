@@ -5,13 +5,13 @@ apt install jq curl -y
 rm -rf /root/nsdomain
 rm nsdomain
 
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-subsl=$(</dev/urandom tr -dc a-x0-9 | head -c4)
-DOMAIN=noonlyone.tk
-SUB_DOMAIN=${sub}.noonlyone.tk
-NS_DOMAIN=ns-${subsl}.noonlyone.tk
-CF_ID=ajikcobain@zohomail.com
-CF_KEY=4b093bcfa2e703eaa33af407448a8cf31e559
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+subsl=$(</dev/urandom tr -dc a-x0-9 | head -c5)
+DOMAIN=sedang.my.id
+SUB_DOMAIN=vpn-${sub}.sedang.my.id
+NS_DOMAIN=ns-${subsl}.sedang.my.id
+CF_ID=sshsedang@gmail.com
+CF_KEY=eaeddbd9e3cf97d4b889bd7fbae56b60bba63
 
 echo "IP=""$SUB_DOMAIN" >> /var/lib/ssnvpn-pro/subdomain.conf
 echo "$NS_DOMAIN" >> /root/nsdomain
